@@ -9,5 +9,4 @@ public class ShinobiManagerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ShinobiManagerApplication.class, args);
 	}
-
 }
