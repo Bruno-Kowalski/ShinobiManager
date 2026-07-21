@@ -1,6 +1,9 @@
-package dev.kowalski.ShinobiManager;
+package dev.kowalski.ShinobiManager.Ninjas;
 
+import dev.kowalski.ShinobiManager.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -13,6 +16,12 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    // @MANY TO ONE = UM NINJA TEM UMA ÚNICA MISSÃO || N:1
+
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") // Foreng key ou Chave estrangeira
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }
